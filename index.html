@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101923">
+  <title>Pixel Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <p class="eyebrow">A TINY BROWSER SANDBOX</p>
+        <h1>PIXEL <span>PLAYGROUND</span></h1>
+      </div>
+      <div class="status"><span class="dot"></span> WORLD ONLINE</div>
+    </header>
+
+    <section class="game-card">
+      <div class="game-topbar">
+        <span>WORLD_01.MAP</span>
+        <span id="coords">X: 0 · Y: 0</span>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="world" width="800" height="500" aria-label="A grassy world where you can move a character"></canvas>
+        <div id="welcome" class="welcome">
+          <div class="welcome-box">
+            <div class="pixel-star">✦</div>
+            <h2>READY TO EXPLORE?</h2>
+            <p>Use the arrow keys or WASD to move.</p>
+            <button id="play">ENTER WORLD</button>
+          </div>
+        </div>
+      </div>
+      <div class="game-bottom">
+        <span id="message">Tip: walk up to the trees and rocks.</span>
+        <span>FPS: <b id="fps">60</b></span>
+      </div>
+    </section>
+
+    <section class="lower">
+      <div class="info-card">
+        <h2>CONTROLS</h2>
+        <div class="key-grid">
+          <span></span><kbd>↑</kbd><span></span>
+          <kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd>
+        </div>
+        <p>Or use <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>. Hold a key to keep moving.</p>
+      </div>
+      <div class="info-card">
+        <h2>PLAYER STATUS</h2>
+        <p>Position <strong id="position">0, 0</strong></p>
+        <p>World objects <strong>trees, rocks, flowers</strong></p>
+        <p>Objective <strong>just wander :]</strong></p>
+      </div>
+      <div class="info-card">
+        <h2>WORLD SETTINGS</h2>
+        <button id="reset" class="secondary">↻ Return to spawn</button>
+        <p class="small">This is your sandbox. More features can be added later.</p>
+      </div>
+    </section>
+    <footer>PIXEL PLAYGROUND · MADE FOR EXPLORATION</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
